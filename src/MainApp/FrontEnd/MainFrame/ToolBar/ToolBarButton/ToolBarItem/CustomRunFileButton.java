@@ -8,6 +8,7 @@ package MainApp.FrontEnd.MainFrame.ToolBar.ToolBarButton.ToolBarItem;
 import MainApp.BackEnd.ClientSocket.SocketThread;
 import MainApp.BackEnd.Utils.ImageUtils;
 import MainApp.BackEnd.adb.clientAdb;
+import MainApp.BackEnd.fpc.clientFpc;
 import MainApp.FrontEnd.MainFrame.Editor.CodeEditor;
 import MainApp.FrontEnd.MainFrame.ToolBar.DeviceListComboBox.DeviceListComboBox;
 import MainApp.resource.Constant;
@@ -43,9 +44,8 @@ public class CustomRunFileButton extends JButton implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        CodeEditor.getInstance().saveFile();
         if (DeviceListComboBox.getInstance().getSelectedIndex()==0){
-            
+            clientFpc.getInstance().execute(CodeEditor.getInstance().getCurrentFile());
         } else {
             Thread socketThread = new Thread(new SocketThread());
             clientAdb.getInstance().createConnection(Integer.parseInt(Constant.con_port));
