@@ -153,6 +153,7 @@ public class DefaultEditor extends RTextScrollPane implements SaveableEditor, Lo
         } else {
             try {
                 file.createNewFile();
+                currentFile = file;
             } catch (IOException ex) {
             }
             saveToFile(file);
