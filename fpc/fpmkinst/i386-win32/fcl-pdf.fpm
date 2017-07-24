@@ -1,0 +1,9 @@
+Name=fcl-pdf
+Version=3.0.2
+Checksum=1246579714
+CPU=i386
+OS=win32
+FPMakeOptions=-o -Ur -o -Xs -o -O2 -o -n -o -di386 -o -dRELEASE -o -XX -o -CX
+Depends=rtl,rtl-objpas|1246579656,fcl-base|1246579658,fcl-image|1246579659,paszlib|1246579656
+NeedLibC=N
+FPMakeAddIn=N

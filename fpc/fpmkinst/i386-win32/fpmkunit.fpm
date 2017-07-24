@@ -1,0 +1,9 @@
+Name=fpmkunit
+Version=3.0.2
+Checksum=1246579696
+CPU=i386
+OS=win32
+FPMakeOptions=-o -Ur -o -Xs -o -O2 -o -n -o -di386 -o -dRELEASE -o -XX -o -CX
+Depends=rtl,hash|1246579656,paszlib|1246579656,fcl-process|1246579687,libtar|1246579685
+NeedLibC=N
+FPMakeAddIn=N

@@ -1,0 +1,9 @@
+Name=winunits-base
+Version=3.0.2
+Checksum=1246579669
+CPU=i386
+OS=win32
+FPMakeOptions=-o -Ur -o -Xs -o -O2 -o -n -o -di386 -o -dRELEASE -o -XX -o -CX
+Depends=rtl,fcl-registry|1246579668,fcl-base|1246579658
+NeedLibC=Y
+FPMakeAddIn=N

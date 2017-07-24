@@ -1,0 +1,9 @@
+Name=libmicrohttpd
+Version=3.0.2
+Checksum=1246579704
+CPU=i386
+OS=win32
+FPMakeOptions=-o -Ur -o -Xs -o -O2 -o -n -o -di386 -o -dRELEASE -o -XX -o -CX
+Depends=rtl,rtl-extra|1246579654
+NeedLibC=Y
+FPMakeAddIn=N
