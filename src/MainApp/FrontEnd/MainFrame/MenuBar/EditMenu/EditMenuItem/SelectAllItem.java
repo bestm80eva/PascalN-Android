@@ -13,14 +13,14 @@ import javax.swing.JMenuItem;
  * @author NghiaDTSE05330
  */
 public class SelectAllItem {
-    
+
     private SelectAllItem() {
     }
-    
+
     public static JMenuItem getInstance() {
         return SelectAllItemHolder.INSTANCE;
     }
-    
+
     private static class SelectAllItemHolder {
 
         private static final JMenuItem INSTANCE = new CustomSelectAllItem();

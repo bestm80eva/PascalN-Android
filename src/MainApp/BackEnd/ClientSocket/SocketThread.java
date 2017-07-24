@@ -79,7 +79,7 @@ public class SocketThread implements Runnable {
                 sendFileThroughSocket(CodeEditor.getInstance().getCurrentFile());
             } else {
                 if (responseLine.equals("OK")) {
-                    clientAdb.getInstance().sendFile(CodeEditor.getInstance().getCurrentFile(),file_path);
+                    clientAdb.getInstance().sendFile(CodeEditor.getInstance().getCurrentFile(), file_path);
 
                 }
             }

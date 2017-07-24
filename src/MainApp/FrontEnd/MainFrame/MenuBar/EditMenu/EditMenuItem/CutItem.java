@@ -13,14 +13,14 @@ import javax.swing.JMenuItem;
  * @author NghiaDTSE05330
  */
 public class CutItem {
-    
+
     private CutItem() {
     }
-    
+
     public static JMenuItem getInstance() {
         return CutItemHolder.INSTANCE;
     }
-    
+
     private static class CutItemHolder {
 
         private static final JMenuItem INSTANCE = new CustomCutItem();

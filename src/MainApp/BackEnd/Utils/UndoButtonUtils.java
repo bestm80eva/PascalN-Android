@@ -19,24 +19,25 @@ import MainApp.resource.Constant;
  * @author NghiaDTSE05330
  */
 public class UndoButtonUtils {
-    public static void reloadIcon(){
-        CustomTextArea customTextArea = (CustomTextArea)CodeEditor.getInstance().getTextArea();
-                if (customTextArea.getCodeEditorUndoManager().canRedo()){
-                    RedoItem.getInstance().setIcon(ImageUtils.getScaledIco(Constant.editmenu_icActiveRedo, 20, 20));
-                    RedoButton.getInstance().setIcon(ImageUtils.getScaledIco(Constant.toolbar_icActiveRedo, 25, 25));
-                } else {
-                    RedoItem.getInstance().setIcon(ImageUtils.getScaledIco(Constant.editmenu_icDeactiveRedo, 20, 20));
 
-                    RedoButton.getInstance().setIcon(ImageUtils.getScaledIco(Constant.toolbar_icDeactiveRedo, 25, 25));
-                }
+    public static void reloadIcon() {
+        CustomTextArea customTextArea = (CustomTextArea) CodeEditor.getInstance().getTextArea();
+        if (customTextArea.getCodeEditorUndoManager().canRedo()) {
+            RedoItem.getInstance().setIcon(ImageUtils.getScaledIco(Constant.editmenu_icActiveRedo, 20, 20));
+            RedoButton.getInstance().setIcon(ImageUtils.getScaledIco(Constant.toolbar_icActiveRedo, 25, 25));
+        } else {
+            RedoItem.getInstance().setIcon(ImageUtils.getScaledIco(Constant.editmenu_icDeactiveRedo, 20, 20));
 
-                if (customTextArea.getCodeEditorUndoManager().canUndo()) {
-                    UndoItem.getInstance().setIcon(ImageUtils.getScaledIco(Constant.editmenu_icActiveUndo, 20, 20));
-                    UndoButton.getInstance().setIcon(ImageUtils.getScaledIco(Constant.toolbar_icActiveUndo, 25, 25));
-                } else {
-                    UndoItem.getInstance().setIcon(ImageUtils.getScaledIco(Constant.editmenu_icDeactiveUndo, 20, 20));
+            RedoButton.getInstance().setIcon(ImageUtils.getScaledIco(Constant.toolbar_icDeactiveRedo, 25, 25));
+        }
 
-                    UndoButton.getInstance().setIcon(ImageUtils.getScaledIco(Constant.toolbar_icDeactiveUndo, 25, 25));
-                }
+        if (customTextArea.getCodeEditorUndoManager().canUndo()) {
+            UndoItem.getInstance().setIcon(ImageUtils.getScaledIco(Constant.editmenu_icActiveUndo, 20, 20));
+            UndoButton.getInstance().setIcon(ImageUtils.getScaledIco(Constant.toolbar_icActiveUndo, 25, 25));
+        } else {
+            UndoItem.getInstance().setIcon(ImageUtils.getScaledIco(Constant.editmenu_icDeactiveUndo, 20, 20));
+
+            UndoButton.getInstance().setIcon(ImageUtils.getScaledIco(Constant.toolbar_icDeactiveUndo, 25, 25));
+        }
     }
 }

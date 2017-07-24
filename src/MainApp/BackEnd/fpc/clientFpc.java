@@ -10,14 +10,14 @@ package MainApp.BackEnd.fpc;
  * @author NghiaDTSE05330
  */
 public class clientFpc {
-    
+
     private clientFpc() {
     }
-    
+
     public static fpc getInstance() {
         return clientFpcHolder.INSTANCE;
     }
-    
+
     private static class clientFpcHolder {
 
         private static final fpc INSTANCE = new fpc();

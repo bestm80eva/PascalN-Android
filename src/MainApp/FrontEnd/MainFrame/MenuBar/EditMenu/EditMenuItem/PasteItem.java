@@ -13,14 +13,14 @@ import javax.swing.JMenuItem;
  * @author NghiaDTSE05330
  */
 public class PasteItem {
-    
+
     private PasteItem() {
     }
-    
+
     public static JMenuItem getInstance() {
         return PasteItemHolder.INSTANCE;
     }
-    
+
     private static class PasteItemHolder {
 
         private static final JMenuItem INSTANCE = new CustomPasteItem();

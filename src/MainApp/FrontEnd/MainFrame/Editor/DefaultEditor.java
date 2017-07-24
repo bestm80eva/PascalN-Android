@@ -38,6 +38,16 @@ public class DefaultEditor extends RTextScrollPane implements SaveableEditor, Lo
         return currentFile;
     }
 
+    private File exeTemp;
+
+    public File getExeTemp() {
+        return exeTemp;
+    }
+
+    public void setExeTemp(File exeTemp) {
+        this.exeTemp = exeTemp;
+    }
+
     public DefaultEditor() {
         super(TextArea.getInstance());
         try {

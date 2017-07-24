@@ -65,7 +65,7 @@ public class Constant {
     public static final String editmmenu_paste = "Open File";
     public static final String editmmenu_redo = "Redo";
     public static final String editmmenu_undo = "Undo";
-    public static final String editMenu_selectAll="Select All";
+    public static final String editMenu_selectAll = "Select All";
 
     //Icon URL
     public static final String editmenu_icCopy = "resource/Icon/icEditCopy.png";

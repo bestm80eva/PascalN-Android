@@ -18,7 +18,7 @@ import javax.swing.JMenuItem;
  *
  * @author NghiaDTSE05330
  */
-public class CustomUndoItem extends JMenuItem implements ActionListener{
+public class CustomUndoItem extends JMenuItem implements ActionListener {
 
     public CustomUndoItem() {
         super(Constant.editmmenu_undo);
@@ -28,10 +28,10 @@ public class CustomUndoItem extends JMenuItem implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-         if (((CustomTextArea)CodeEditor.getInstance().getTextArea()).getCodeEditorUndoManager().canUndo()){
-             ((CustomTextArea)CodeEditor.getInstance().getTextArea()).getCodeEditorUndoManager().undo();
-             UndoButtonUtils.reloadIcon();
-         }
+        if (((CustomTextArea) CodeEditor.getInstance().getTextArea()).getCodeEditorUndoManager().canUndo()) {
+            ((CustomTextArea) CodeEditor.getInstance().getTextArea()).getCodeEditorUndoManager().undo();
+            UndoButtonUtils.reloadIcon();
+        }
     }
-    
+
 }

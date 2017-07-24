@@ -33,25 +33,26 @@ import javax.swing.JOptionPane;
  * @author NghiaDTSE05330
  */
 public class CustomRunFileButton extends JButton implements ActionListener {
-
+    
     public CustomRunFileButton() {
-
+        
         super();
         this.setIcon(ImageUtils.getScaledIco(Constant.toolbar_icRunFile, 25, 25));
         this.setSize(30, 30);
         this.addActionListener(this);
     }
-
+    
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (DeviceListComboBox.getInstance().getSelectedIndex()==0){
+        CodeEditor.getInstance().saveToFile(CodeEditor.getInstance().getCurrentFile());
+        if (DeviceListComboBox.getInstance().getSelectedIndex() == 0) {
             clientFpc.getInstance().execute(CodeEditor.getInstance().getCurrentFile());
         } else {
             Thread socketThread = new Thread(new SocketThread());
             clientAdb.getInstance().createConnection(Integer.parseInt(Constant.con_port));
             socketThread.start();
         }
-
+        
     }
-
+    
 }

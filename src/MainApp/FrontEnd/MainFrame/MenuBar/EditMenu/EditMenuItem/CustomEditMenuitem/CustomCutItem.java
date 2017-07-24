@@ -16,7 +16,8 @@ import javax.swing.JMenuItem;
  *
  * @author NghiaDTSE05330
  */
-public class CustomCutItem extends JMenuItem implements ActionListener{
+public class CustomCutItem extends JMenuItem implements ActionListener {
+
     public CustomCutItem() {
         super(Constant.editmmenu_cut);
         this.setIcon(ImageUtils.getScaledIco(Constant.editmenu_icCut, 20, 20));

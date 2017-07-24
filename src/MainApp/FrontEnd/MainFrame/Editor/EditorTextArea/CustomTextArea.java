@@ -80,7 +80,7 @@ public class CustomTextArea extends RSyntaxTextArea {
                         UndoButtonUtils.reloadIcon();
                     }
                     UndoButtonUtils.reloadIcon();
-                    
+
                 } catch (CannotRedoException ex) {
                 }
             }

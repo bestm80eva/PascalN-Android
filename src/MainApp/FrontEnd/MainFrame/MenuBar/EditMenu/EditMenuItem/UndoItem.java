@@ -13,14 +13,14 @@ import javax.swing.JMenuItem;
  * @author NghiaDTSE05330
  */
 public class UndoItem {
-    
+
     private UndoItem() {
     }
-    
+
     public static JMenuItem getInstance() {
         return UndoItemHolder.INSTANCE;
     }
-    
+
     private static class UndoItemHolder {
 
         private static final JMenuItem INSTANCE = new CustomUndoItem();

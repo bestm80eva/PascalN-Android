@@ -16,7 +16,8 @@ import javax.swing.JMenuItem;
  *
  * @author NghiaDTSE05330
  */
-public class CustomCopyItem extends JMenuItem implements ActionListener{
+public class CustomCopyItem extends JMenuItem implements ActionListener {
+
     public CustomCopyItem() {
         super(Constant.editmenu_copy);
         this.setIcon(ImageUtils.getScaledIco(Constant.editmenu_icCopy, 20, 20));
@@ -26,6 +27,6 @@ public class CustomCopyItem extends JMenuItem implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         CodeEditor.getInstance().getTextArea().copy();
-        
-    }    
+
+    }
 }

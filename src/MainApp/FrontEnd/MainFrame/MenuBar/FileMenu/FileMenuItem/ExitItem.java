@@ -14,14 +14,14 @@ import javax.swing.JMenuItem;
  * @author NghiaDTSE05330
  */
 public class ExitItem {
-    
+
     private ExitItem() {
     }
-    
+
     public static JMenuItem getInstance() {
         return ExitItemHolder.INSTANCE;
     }
-    
+
     private static class ExitItemHolder {
 
         private static final JMenuItem INSTANCE = new CustomExitItem();

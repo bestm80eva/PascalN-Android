@@ -18,8 +18,8 @@ import javax.swing.JMenuItem;
  *
  * @author NghiaDTSE05330
  */
-public class CustomRedoItem extends JMenuItem implements ActionListener{
-    
+public class CustomRedoItem extends JMenuItem implements ActionListener {
+
     public CustomRedoItem() {
         super(Constant.editmmenu_redo);
         this.setIcon(ImageUtils.getScaledIco(Constant.editmenu_icDeactiveRedo, 20, 20));
@@ -28,9 +28,9 @@ public class CustomRedoItem extends JMenuItem implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-         if (((CustomTextArea)CodeEditor.getInstance().getTextArea()).getCodeEditorUndoManager().canRedo()){
-             ((CustomTextArea)CodeEditor.getInstance().getTextArea()).getCodeEditorUndoManager().redo();
-             UndoButtonUtils.reloadIcon();
-         }
+        if (((CustomTextArea) CodeEditor.getInstance().getTextArea()).getCodeEditorUndoManager().canRedo()) {
+            ((CustomTextArea) CodeEditor.getInstance().getTextArea()).getCodeEditorUndoManager().redo();
+            UndoButtonUtils.reloadIcon();
+        }
     }
 }

@@ -18,7 +18,8 @@ import javax.swing.JMenuItem;
  *
  * @author NghiaDTSE05330
  */
-public class CustomPasteItem extends JMenuItem implements ActionListener{
+public class CustomPasteItem extends JMenuItem implements ActionListener {
+
     public CustomPasteItem() {
         super(Constant.editmmenu_paste);
         this.setIcon(ImageUtils.getScaledIco(Constant.editmenu_icPaste, 20, 20));

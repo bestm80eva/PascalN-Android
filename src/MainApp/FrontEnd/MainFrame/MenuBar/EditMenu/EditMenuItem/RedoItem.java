@@ -13,14 +13,14 @@ import javax.swing.JMenuItem;
  * @author NghiaDTSE05330
  */
 public class RedoItem {
-    
+
     private RedoItem() {
     }
-    
+
     public static JMenuItem getInstance() {
         return RedoItemHolder.INSTANCE;
     }
-    
+
     private static class RedoItemHolder {
 
         private static final JMenuItem INSTANCE = new CustomRedoItem();

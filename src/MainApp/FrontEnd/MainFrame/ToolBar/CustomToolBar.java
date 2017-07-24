@@ -37,6 +37,7 @@ public class CustomToolBar extends JToolBar {
         this.addSeparator();
 
         this.add(RunFileButton.getInstance());
+        this.add(StopButton.getInstance());
 
     }
 

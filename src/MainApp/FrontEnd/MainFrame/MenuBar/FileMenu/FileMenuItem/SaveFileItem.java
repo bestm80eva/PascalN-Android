@@ -13,14 +13,14 @@ import javax.swing.JMenuItem;
  * @author NghiaDTSE05330
  */
 public class SaveFileItem {
-    
+
     private SaveFileItem() {
     }
-    
+
     public static JMenuItem getInstance() {
         return SaveFileItemHolder.INSTANCE;
     }
-    
+
     private static class SaveFileItemHolder {
 
         private static final JMenuItem INSTANCE = new CustomSaveFileItem();

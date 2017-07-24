@@ -13,14 +13,14 @@ import javax.swing.JMenuItem;
  * @author NghiaDTSE05330
  */
 public class CopyItem {
-    
+
     private CopyItem() {
     }
-    
+
     public static JMenuItem getInstance() {
         return CopyItemHolder.INSTANCE;
     }
-    
+
     private static class CopyItemHolder {
 
         private static final JMenuItem INSTANCE = new CustomCopyItem();

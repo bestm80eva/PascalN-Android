@@ -113,16 +113,18 @@ public class adb {
 
     public void createConnection(int port) {
         this.port = port;
-        
+
         System.out.println("forward tcp:" + port + " tcp:" + port);
         execute("forward tcp:" + port + " tcp:" + port, false);
     }
-    public void removeSocket(){
+
+    public void removeSocket() {
         execute("reverse --remove-all", false);
     }
+
     public String sendFile(File file, String path) {
         //getAppFolder();
-        execute("push " + "\"" + file.getAbsolutePath() + "\"" + " " + "\"" + path + "/"  + "\"", false);
+        execute("push " + "\"" + file.getAbsolutePath() + "\"" + " " + "\"" + path + "/" + "\"", false);
         return path + "/" + file.getName();
     }
 
@@ -158,9 +160,10 @@ public class adb {
 
         return listDevice;
     }
-    public void refresh(){
-        
-        int oldSelect=DeviceListComboBox.getInstance().getSelectedIndex();
+
+    public void refresh() {
+
+        int oldSelect = DeviceListComboBox.getInstance().getSelectedIndex();
         System.out.println("Connection Created");
         ArrayList<MobileDevice> deviceList = new ArrayList<MobileDevice>();
         deviceList = clientAdb.getInstance().getMobileDevice();
@@ -174,10 +177,9 @@ public class adb {
 
             DeviceListComboBox.getInstance().getDeviceList().addElement("[" + deviceList.get(i).id + "]" + " " + deviceList.get(i).model);
         }
-        if (DeviceListComboBox.getInstance().getDeviceList().getSize()>oldSelect){
-             DeviceListComboBox.getInstance().setSelectedIndex(oldSelect);
+        if (DeviceListComboBox.getInstance().getDeviceList().getSize() > oldSelect) {
+            DeviceListComboBox.getInstance().setSelectedIndex(oldSelect);
         }
-       
 
     }
 

@@ -13,14 +13,14 @@ import javax.swing.JMenuItem;
  * @author NghiaDTSE05330
  */
 public class OpenFileItem {
-    
+
     private OpenFileItem() {
     }
-    
-    public static  JMenuItem getInstance() {
+
+    public static JMenuItem getInstance() {
         return OpenFileItemHolder.INSTANCE;
     }
-    
+
     private static class OpenFileItemHolder {
 
         private static final JMenuItem INSTANCE = new CustomOpenFileItem();

@@ -18,7 +18,7 @@ import javax.swing.JMenuItem;
  *
  * @author NghiaDTSE05330
  */
-public class CustomExitItem extends JMenuItem implements ActionListener{
+public class CustomExitItem extends JMenuItem implements ActionListener {
 
     public CustomExitItem() {
         super(Constant.filemenu_exit);
@@ -29,8 +29,8 @@ public class CustomExitItem extends JMenuItem implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        MainFrame.getInstance().dispatchEvent(new WindowEvent(MainFrame.getInstance(),WindowEvent.WINDOW_CLOSING) {
+        MainFrame.getInstance().dispatchEvent(new WindowEvent(MainFrame.getInstance(), WindowEvent.WINDOW_CLOSING) {
         });
     }
-    
+
 }

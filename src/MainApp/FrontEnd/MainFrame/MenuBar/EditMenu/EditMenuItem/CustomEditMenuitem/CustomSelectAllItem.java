@@ -16,8 +16,8 @@ import javax.swing.JMenuItem;
  *
  * @author NghiaDTSE05330
  */
-public class CustomSelectAllItem extends JMenuItem implements ActionListener{
-    
+public class CustomSelectAllItem extends JMenuItem implements ActionListener {
+
     public CustomSelectAllItem() {
         super(Constant.editMenu_selectAll);
         this.setIcon(ImageUtils.getScaledIco(Constant.editmenu_icSelectAll, 20, 20));
@@ -27,6 +27,6 @@ public class CustomSelectAllItem extends JMenuItem implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         CodeEditor.getInstance().getTextArea().selectAll();
-        
-    }      
+
+    }
 }
